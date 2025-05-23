@@ -1,0 +1,855 @@
+{
+  "info": {
+    "name": "Perfulandia API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Productos",
+      "item": [
+        {
+          "name": "Listar Productos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/productos",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "productos"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obtener Productos por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/productos/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "productos",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Crear Productos",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Perfume X\",\n  \"descripcion\": \"Aroma floral\",\n  \"precio\": 10000,\n  \"stock\": 50,\n  \"categoria\": \"Femenino\",\n  \"ecoFriendly\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/productos",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "productos"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Actualizar Productos",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Perfume X\",\n  \"descripcion\": \"Aroma floral\",\n  \"precio\": 10000,\n  \"stock\": 50,\n  \"categoria\": \"Femenino\",\n  \"ecoFriendly\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/productos/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "productos",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Eliminar Productos",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/productos/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "productos",
+                "1"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Marcas",
+      "item": [
+        {
+          "name": "Listar Marcas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/marcas",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "marcas"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obtener Marcas por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/marcas/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "marcas",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Crear Marcas",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Natura\",\n  \"descripcion\": \"Marca brasile\\u00f1a\",\n  \"activa\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/marcas",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "marcas"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Actualizar Marcas",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Natura\",\n  \"descripcion\": \"Marca brasile\\u00f1a\",\n  \"activa\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/marcas/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "marcas",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Eliminar Marcas",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/marcas/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "marcas",
+                "1"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Categorias",
+      "item": [
+        {
+          "name": "Listar Categorias",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/categorias",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "categorias"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obtener Categorias por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/categorias/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "categorias",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Crear Categorias",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Perfume\",\n  \"descripcion\": \"Fragancias variadas\",\n  \"activa\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/categorias",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "categorias"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Actualizar Categorias",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Perfume\",\n  \"descripcion\": \"Fragancias variadas\",\n  \"activa\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/categorias/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "categorias",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Eliminar Categorias",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/categorias/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "categorias",
+                "1"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Usuarios",
+      "item": [
+        {
+          "name": "Listar Usuarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/usuarios",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "usuarios"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obtener Usuarios por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/usuarios/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "usuarios",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Crear Usuarios",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Juan P\\u00e9rez\",\n  \"correo\": \"juan@example.com\",\n  \"contrase\\u00f1a\": \"1234\",\n  \"activo\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/usuarios",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "usuarios"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Actualizar Usuarios",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Juan P\\u00e9rez\",\n  \"correo\": \"juan@example.com\",\n  \"contrase\\u00f1a\": \"1234\",\n  \"activo\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/usuarios/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "usuarios",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Eliminar Usuarios",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/usuarios/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "usuarios",
+                "1"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ordenes",
+      "item": [
+        {
+          "name": "Listar Ordenes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/ordenes",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "ordenes"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obtener Ordenes por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/ordenes/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "ordenes",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Crear Ordenes",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"usuarioId\": 1,\n  \"fecha\": \"2024-05-20\",\n  \"total\": 15000,\n  \"estado\": \"PENDIENTE\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/ordenes",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "ordenes"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Actualizar Ordenes",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"usuarioId\": 1,\n  \"fecha\": \"2024-05-20\",\n  \"total\": 15000,\n  \"estado\": \"PENDIENTE\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/ordenes/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "ordenes",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Eliminar Ordenes",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/ordenes/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "ordenes",
+                "1"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Detalles Orden",
+      "item": [
+        {
+          "name": "Listar Detalles Orden",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/detalles-orden",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "detalles-orden"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obtener Detalles Orden por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/detalles-orden/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "detalles-orden",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Crear Detalles Orden",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ordenId\": 1,\n  \"productoId\": 1,\n  \"cantidad\": 2,\n  \"precioUnitario\": 7500\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/detalles-orden",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "detalles-orden"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Actualizar Detalles Orden",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ordenId\": 1,\n  \"productoId\": 1,\n  \"cantidad\": 2,\n  \"precioUnitario\": 7500\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/detalles-orden/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "detalles-orden",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Eliminar Detalles Orden",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/detalles-orden/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "detalles-orden",
+                "1"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Rese\u00f1as",
+      "item": [
+        {
+          "name": "Listar Rese\u00f1as",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/resenas",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "resenas"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obtener Rese\u00f1as por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/resenas/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "resenas",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Crear Rese\u00f1as",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"productoId\": 1,\n  \"usuarioId\": 1,\n  \"comentario\": \"Excelente aroma\",\n  \"puntuacion\": 5\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/resenas",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "resenas"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Actualizar Rese\u00f1as",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"productoId\": 1,\n  \"usuarioId\": 1,\n  \"comentario\": \"Excelente aroma\",\n  \"puntuacion\": 5\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/resenas/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "resenas",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Eliminar Rese\u00f1as",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/catalogo/resenas/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "catalogo",
+                "resenas",
+                "1"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
