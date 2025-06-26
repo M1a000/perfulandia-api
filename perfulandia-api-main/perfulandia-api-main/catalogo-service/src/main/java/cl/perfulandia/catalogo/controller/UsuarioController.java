@@ -1,24 +1,23 @@
 package cl.perfulandia.catalogo.controller;
 
-import cl.perfulandia.catalogo.service.UsuarioService; 
-
-import org.springframework.beans.factory.annotation.Autowired;
+import cl.perfulandia.catalogo.service.UsuarioService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/catalogo/usuarios")
 public class UsuarioController {
 
-    @Autowired
-    private UsuarioService service;
+    private final UsuarioService service;
+
+    public UsuarioController(UsuarioService service) {
+        this.service = service;
+    }
 
     @GetMapping
-    public List<UsuarioDTO> list(@RequestParam(required = false) Boolean activo) {
-        if (activo != null) return service.filterByActivo(activo);
+    public List<UsuarioDTO> list() {
         return service.getAll();
     }
 
@@ -33,7 +32,9 @@ public class UsuarioController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<UsuarioDTO> update(@PathVariable Long id, @Validated @RequestBody UsuarioDTO dto) {
+    public ResponseEntity<UsuarioDTO> update(
+        @PathVariable Long id,
+        @Validated @RequestBody UsuarioDTO dto) {
         return ResponseEntity.ok(service.update(id, dto));
     }
 

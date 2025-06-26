@@ -2,9 +2,9 @@ package cl.perfulandia.catalogo.repository;
 
 import cl.perfulandia.catalogo.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
+@Repository
 public interface UsuarioRepositoryJPA extends JpaRepository<Usuario, Long> {
-    List<Usuario> findByActivo(Boolean activo);
+    boolean existsByEmail(String email);
 }

@@ -1,24 +1,23 @@
 package cl.perfulandia.catalogo.controller;
 
 import cl.perfulandia.catalogo.service.ReseñaService;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/catalogo/resenas")
+@RequestMapping("/api/catalogo/reseñas")
 public class ReseñaController {
 
-    @Autowired
-    private ReseñaService service;
+    private final ReseñaService service;
+
+    public ReseñaController(ReseñaService service) {
+        this.service = service;
+    }
 
     @GetMapping
-    public List<ReseñaDTO> list(@RequestParam(required = false) Long productoId) {
-        if (productoId != null) return service.filterByProducto(productoId);
+    public List<ReseñaDTO> list() {
         return service.getAll();
     }
 
@@ -33,7 +32,9 @@ public class ReseñaController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ReseñaDTO> update(@PathVariable Long id, @Validated @RequestBody ReseñaDTO dto) {
+    public ResponseEntity<ReseñaDTO> update(
+        @PathVariable Long id,
+        @Validated @RequestBody ReseñaDTO dto) {
         return ResponseEntity.ok(service.update(id, dto));
     }
 

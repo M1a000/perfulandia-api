@@ -1,34 +1,26 @@
 package cl.perfulandia.catalogo.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
-@Entity
-@Table(name = "productos")
 @Data
+@Entity
+@Table(name = "producto")
 public class Producto {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 100)
     private String nombre;
 
-@Column(nullable = false)
+    @Column(nullable = false)
+    private Double precio;
+
+    @Column(length = 500)
     private String descripcion;
 
     @Column(nullable = false)
-    private Integer precio;
-
-    @Column(nullable = false)
-    private Integer stock;
-
-@Column(nullable = false)
-    private String categoria;
-    private Boolean ecoFriendly;
+    private Boolean activo = true;
 }

@@ -3,10 +3,11 @@ package cl.perfulandia.catalogo.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-@Entity
-@Table(name = "resenas")
 @Data
+@Entity
+@Table(name = "reseña")
 public class Reseña {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -15,11 +16,13 @@ public class Reseña {
     private Long productoId;
 
     @Column(nullable = false)
-    private Long usuarioId;
+    private Long clienteId;
 
     @Column(nullable = false)
+    private Integer puntuacion;
+
+    @Column(length = 1000)
     private String comentario;
 
-    @Column(nullable = false)
-    private Integer puntuacion; // escala 1-5
+    // Puedes agregar más campos según tus necesidades
 }

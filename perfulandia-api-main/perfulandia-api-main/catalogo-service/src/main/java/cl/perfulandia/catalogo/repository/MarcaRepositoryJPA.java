@@ -2,10 +2,9 @@ package cl.perfulandia.catalogo.repository;
 
 import cl.perfulandia.catalogo.model.Marca;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
+@Repository
 public interface MarcaRepositoryJPA extends JpaRepository<Marca, Long> {
-    List<Marca> findByNombreContainingIgnoreCase(String nombre);
-    List<Marca> findByActiva(Boolean activa);
+    boolean existsByNombre(String nombre);
 }

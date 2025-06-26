@@ -1,20 +1,20 @@
 package cl.perfulandia.catalogo.controller;
 
 import cl.perfulandia.catalogo.service.MarcaService;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/catalogo/marcas")
 public class MarcaController {
 
-    @Autowired
-    private MarcaService service;
+    private final MarcaService service;
+
+    public MarcaController(MarcaService service) { // <-- No necesitas @Autowired aquí
+        this.service = service;
+    }
 
     @GetMapping
     public List<MarcaDTO> list() {
