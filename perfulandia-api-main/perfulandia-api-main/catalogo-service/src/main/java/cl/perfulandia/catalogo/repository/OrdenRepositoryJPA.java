@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface OrdenRepositoryJPA extends JpaRepository<Orden, Long> {
-    // Puedes agregar métodos personalizados aquí si lo necesitas
+  
 }

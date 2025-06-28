@@ -53,7 +53,7 @@ public class ReseñaService {
         repository.deleteById(id);
     }
 
-    // Métodos para controlador V2 (HATEOAS)
+    
     public Reseña obtenerReseñaPorId(Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Reseña no encontrada: " + id));
@@ -89,7 +89,7 @@ public class ReseñaService {
         repository.deleteById(id);
     }
 
-    // Método auxiliar
+    
     private ReseñaDTO toDTO(Reseña reseña) {
         ReseñaDTO dto = new ReseñaDTO();
         dto.setId(reseña.getId());

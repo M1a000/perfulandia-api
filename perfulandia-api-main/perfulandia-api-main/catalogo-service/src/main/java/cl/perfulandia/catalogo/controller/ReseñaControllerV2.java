@@ -10,13 +10,15 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
+
 import java.util.List;
 import java.util.stream.Collectors;
+
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 @Tag(name = "Reseña V2", description = "Operaciones de reseñas con HATEOAS (versión 2)")
 @RestController
-@RequestMapping("/api/v2/reseñas")
+@RequestMapping("/api/v2/resenas")
 public class ReseñaControllerV2 {
 
     private final ReseñaService reseñaService;
@@ -51,7 +53,7 @@ public class ReseñaControllerV2 {
             @Validated(ReseñaDTO.CreateValidation.class) @RequestBody ReseñaDTO dto) {
         Reseña reseña = reseñaService.crearReseña(dto);
         EntityModel<Reseña> model = EntityModel.of(reseña,
-            linkTo(methodOn(ReseñaControllerV2.class).getReseña(reseña.getId())) .withSelfRel(),
+            linkTo(methodOn(ReseñaControllerV2.class).getReseña(reseña.getId())).withSelfRel(),
             linkTo(methodOn(ReseñaControllerV2.class).getTodasReseñas()).withRel("reseñas")
         );
         return ResponseEntity.created(

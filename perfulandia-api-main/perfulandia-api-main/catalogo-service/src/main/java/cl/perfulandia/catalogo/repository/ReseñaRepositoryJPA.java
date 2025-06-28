@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ReseñaRepositoryJPA extends JpaRepository<Reseña, Long> {
-    // Puedes agregar métodos personalizados aquí si lo necesitas
+   
 }

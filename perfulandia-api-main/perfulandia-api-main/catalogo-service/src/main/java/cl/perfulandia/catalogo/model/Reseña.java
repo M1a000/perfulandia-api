@@ -24,5 +24,5 @@ public class Reseña {
     @Column(length = 1000)
     private String comentario;
 
-    // Puedes agregar más campos según tus necesidades
+  
 }

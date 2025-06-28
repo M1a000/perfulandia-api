@@ -43,7 +43,7 @@ public class ReseñaControllerV2Test {
             .thenReturn(EntityModel.of(reseña));
 
 
-        mockMvc.perform(get("/api/v2/reseñas/1")
+        mockMvc.perform(get("/api/v2/resenas/1")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.puntuacion").value(5));
@@ -71,7 +71,7 @@ public class ReseñaControllerV2Test {
         when(reseñaModelAssembler.toModel(reseñaOutput))
             .thenReturn(EntityModel.of(reseñaOutput));
 
-        mockMvc.perform(post("/api/v2/reseñas")
+        mockMvc.perform(post("/api/v2/resenas")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\"productoId\":1,\"clienteId\":1,\"puntuacion\":5,\"comentario\":\"Excelente\"}"))
                 .andExpect(status().isCreated())

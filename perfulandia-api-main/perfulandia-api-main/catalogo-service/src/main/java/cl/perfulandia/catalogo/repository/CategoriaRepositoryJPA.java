@@ -10,6 +10,6 @@ public interface CategoriaRepositoryJPA extends JpaRepository<Categoria, Long> {
     List<Categoria> findByNombreContainingIgnoreCase(String nombre);
     List<Categoria> findByActiva(Boolean activa);
     
-    // Método necesario para validar existencia por nombre
+  
     boolean existsByNombre(String nombre);
 }
